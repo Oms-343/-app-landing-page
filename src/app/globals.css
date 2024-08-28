@@ -2,4 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn {
+    @apply rounded-lg px-4 py-2 font-medium;
+  }
 
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+
+  .btn-text {
+    @apply text-black bg-transparent;
+  }
+}
