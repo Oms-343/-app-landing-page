@@ -1,4 +1,9 @@
+import Header from "@/sections/Header";
 
 export default function Home() {
-  return <div className="">hello ther</div>
+  return (
+    <div className="">
+      <Header />
+    </div>
+  );
 }
