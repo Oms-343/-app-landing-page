@@ -7,11 +7,7 @@ const config: Config = {
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      container: {
-        center: true,
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
