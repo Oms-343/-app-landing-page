@@ -10,7 +10,7 @@ import apexLogo from "@/public/logo-apex.png";
 
 export default function Clients() {
   return (
-    <section className="py-8 md:py-12">
+    <section className="py-8 md:py-12 bg-white">
       <div className="container">
         <div className="flex overflow-hidden [mask-image:linear-gradient(to_left,transparent,black,transparent)]">
           <ul className="flex gap-14 flex-none">
