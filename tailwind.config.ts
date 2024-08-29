@@ -7,10 +7,12 @@ const config: Config = {
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "375px",
+      md: "768px",
+      lg: "1200px",
+    },
     extend: {
-      screens: {
-        lg: "1200px",
-      },
       container: {
         center: true,
         padding: {
