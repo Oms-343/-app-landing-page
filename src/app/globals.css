@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply rounded-lg px-4 py-2 font-medium;
+    @apply rounded-lg px-4 py-2 font-medium inline-flex justify-center items-center tracking-tight;
   }
 
   .btn-primary {
