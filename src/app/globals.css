@@ -14,4 +14,8 @@
   .btn-text {
     @apply text-black bg-transparent;
   }
+
+  .client-image {
+    @apply h-8 w-auto;
+  }
 }
