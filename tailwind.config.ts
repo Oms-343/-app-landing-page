@@ -7,13 +7,31 @@ const config: Config = {
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    screens: {
+      sm: "375px",
+      md: "768px",
+      lg: "1200px",
+    },
+    extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "20px",
+          lg: "80px",
+        },
+      },
+    },
   },
   plugins: [],
 };
 export default config;
 
 /*
+ screens: {
+      sm: "375px",
+      md: "768px",
+      lg: "1200px",
+    },
  extend: {
       container: {
         center: true,
