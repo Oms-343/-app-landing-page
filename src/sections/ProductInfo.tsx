@@ -12,7 +12,7 @@ export default function ProductInfo() {
   return (
     <section className="py-24 bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] overflow-x-clip">
       <div className="container">
-        <div className="max-w-[540px] mx-auto">
+        <div className="section-heading-container">
           <div className="w-fit mx-auto">
             <p className="badge">Boost Your Productivity</p>
           </div>

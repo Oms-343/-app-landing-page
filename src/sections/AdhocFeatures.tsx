@@ -6,7 +6,7 @@ export default function KeyFeatures() {
   return (
     <section className="hidden lg:block py-24 bg-white">
       <div className="container">
-        <div className="max-w-[540px] mx-auto">
+        <div className="section-heading-container">
           <div className="w-fit mx-auto">
             <p className="badge">Everything you need</p>
           </div>

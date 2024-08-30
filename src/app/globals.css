@@ -23,6 +23,10 @@
     @apply text-sm tracking-tight   inline-block px-3 py-1 rounded-lg  border border-[#222]/10;
   }
 
+  .section-heading-container {
+    @apply max-w-[540px] mx-auto;
+  }
+
   .section-title {
     @apply text-center text-3xl md:text-[54px] md:leading-[60px]  font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text;
   }
