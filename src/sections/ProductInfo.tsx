@@ -44,9 +44,9 @@ export default function ProductInfo() {
           />
         </div>
 
-        <div className="max-w-[240px] mx-auto  mt-10   ">
-          <div className=" flex flex-col">
-            <div className="py-10 flex flex-col  gap-2 ">
+        <div className="mt-10">
+          <div className="max-w-[240px] md:max-w-[520px] md:grid md:grid-cols-2 md:gap-x-4 lg:max-w-none lg:flex lg:flex-row   mx-auto  flex flex-col ">
+            <div className="py-10 flex flex-col  gap-2  ">
               <Leaf />
               <p className="tracking-tight font-bold text-lg ">
                 Integrating ecosystem
@@ -59,45 +59,46 @@ export default function ProductInfo() {
                 <ArrowRight className="h-5 w-5" />
               </button>
             </div>
-          </div>
-          <div className="py-10  flex flex-col  gap-2 ">
-            <Goal />
-            <p className="tracking-tight font-bold text-lg ">
-              Goal setting and tracking
-            </p>
-            <p className="tracking-tight ">
-              Set and track goals with manageable task breakdowns.
-            </p>
-            <button className="btn btn-text gap-1 pl-0">
-              <span>Lear More</span>
-              <ArrowRight className="h-5 w-5" />
-            </button>
-          </div>
-          <div className="py-10  flex flex-col  gap-2 ">
-            <Lock />
-            <p className="tracking-tight font-bold text-lg ">
-              Secure data encryption
-            </p>
-            <p className="tracking-tight ">
-              Ensure your data’s safety with top-tier encryption.
-            </p>
-            <button className="btn btn-text gap-1 pl-0">
-              <span>Lear More</span>
-              <ArrowRight className="h-5 w-5" />
-            </button>
-          </div>
-          <div className="py-10  flex flex-col  gap-2 ">
-            <Bell />
-            <p className="tracking-tight font-bold text-lg ">
-              Customizable notifications
-            </p>
-            <p className="tracking-tight   ">
-              Get alerts on tasks and deadlines that matter most.
-            </p>
-            <button className="btn btn-text gap-1 pl-0">
-              <span>Lear More</span>
-              <ArrowRight className="h-5 w-5" />
-            </button>
+
+            <div className="py-10  flex flex-col  gap-2 ">
+              <Goal />
+              <p className="tracking-tight font-bold text-lg ">
+                Goal setting and tracking
+              </p>
+              <p className="tracking-tight ">
+                Set and track goals with manageable task breakdowns.
+              </p>
+              <button className="btn btn-text gap-1 pl-0">
+                <span>Lear More</span>
+                <ArrowRight className="h-5 w-5" />
+              </button>
+            </div>
+            <div className="py-10  flex flex-col  gap-2 ">
+              <Lock />
+              <p className="tracking-tight font-bold text-lg ">
+                Secure data encryption
+              </p>
+              <p className="tracking-tight ">
+                Ensure your data’s safety with top-tier encryption.
+              </p>
+              <button className="btn btn-text gap-1 pl-0">
+                <span>Lear More</span>
+                <ArrowRight className="h-5 w-5" />
+              </button>
+            </div>
+            <div className="py-10  flex flex-col  gap-2 ">
+              <Bell />
+              <p className="tracking-tight font-bold text-lg ">
+                Customizable notifications
+              </p>
+              <p className="tracking-tight   ">
+                Get alerts on tasks and deadlines that matter most.
+              </p>
+              <button className="btn btn-text gap-1 pl-0">
+                <span>Lear More</span>
+                <ArrowRight className="h-5 w-5" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
