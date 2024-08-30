@@ -2,6 +2,7 @@ import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
 import Clients from "@/sections/Clients";
 import ProductInfo from "@/sections/ProductInfo";
+import AdhocFeatures from "@/sections/AdhocFeatures";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Clients />
       <ProductInfo />
+      <AdhocFeatures />
     </div>
   );
 }
