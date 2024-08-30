@@ -16,10 +16,10 @@ export default function ProductInfo() {
           <div className="w-fit mx-auto">
             <p className="badge">Boost Your Productivity</p>
           </div>
-          <h2 className="text-center text-3xl md:text-[54px] md:leading-[60px]  font-bold tracking-tighter heading-background mt-5 ">
+          <h2 className="section-title mt-5 ">
             A more effective way to track progress
           </h2>
-          <p className="text-center text-[20px] leading-[30px] tracking-tight text-[#010D3E] mt-5 ">
+          <p className="section-description mt-5 ">
             Effortlessly turn your ideas into a fully functional, responsive,
             no-code SaaS website in just minutes with the set of free components
             for Framer.

@@ -10,10 +10,10 @@ export default function KeyFeatures() {
           <div className="w-fit mx-auto">
             <p className="badge">Everything you need</p>
           </div>
-          <h2 className="text-center text-[54px] leading-[60px]  font-bold tracking-tighter heading-background mt-5 ">
+          <h2 className="section-title mt-5 ">
             Streamlined for easy management
           </h2>
-          <p className="text-center text-[20px] leading-[30px] tracking-tight text-[#010D3E] mt-5 ">
+          <p className="section-description mt-5 ">
             Enjoy customizable lists, team work tools, and smart tracking all in
             one place. Set tasks, get reminders, and see your progress simply
             and quickly.
