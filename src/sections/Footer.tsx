@@ -25,6 +25,7 @@ export default function Footer() {
           <SocialX />
           <SocialLinkedin />
           <SocialPin />
+          <SocialInsta />
           <SocialYoutube />
         </div>
         <p className="mt-6">
