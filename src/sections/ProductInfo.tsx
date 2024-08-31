@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 import ProductImage from "@/public/product-image.png";
 import pyramidImage from "@/public/pyramid.png";
 import tubeImage from "@/public/tube.png";
@@ -7,10 +11,23 @@ import Leaf from "@/public/leaf.svg";
 import Lock from "@/public/lock.svg";
 import Goal from "@/public/goal.svg";
 import Bell from "@/public/bell.svg";
+import { useRef } from "react";
 
 export default function ProductInfo() {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [-150, 150]);
+
   return (
-    <section className="py-24 bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] overflow-x-clip">
+    <section
+      ref={sectionRef}
+      className="py-24 bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] overflow-x-clip"
+    >
       <div className="container">
         <div className="section-heading-container">
           <div className="w-fit mx-auto">
@@ -28,19 +45,25 @@ export default function ProductInfo() {
 
         <div className="relative">
           <Image src={ProductImage} alt="product-image" className="mt-10" />
-          <Image
-            src={pyramidImage}
+          <motion.img
+            src={pyramidImage.src}
             alt="pyramid-image"
             height={262}
             width={262}
             className="hidden md:block absolute -right-36 -top-32"
+            style={{
+              translateY,
+            }}
           />
-          <Image
-            src={tubeImage}
+          <motion.img
+            src={tubeImage.src}
             alt="tube-image"
             height={248}
             width={248}
             className="hidden md:block absolute bottom-24 -left-32"
+            style={{
+              translateY,
+            }}
           />
         </div>
 
