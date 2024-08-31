@@ -107,7 +107,7 @@ function TestimonialsColumn(props: {
 
 export default function Testimoials() {
   return (
-    <section className=" bg-white">
+    <section className=" pt-12 pb-20 bg-white">
       <div className="container">
         <div className="section-heading-container ">
           <div className="w-fit mx-auto">
