@@ -1,5 +1,8 @@
-import CheckIcon from "@/public/check.svg";
+"use client";
 import clsx from "clsx";
+import { motion } from "framer-motion";
+
+import CheckIcon from "@/public/check.svg";
 
 const pricingTiers = [
   {
@@ -55,10 +58,10 @@ const pricingTiers = [
 
 export default function Pricing() {
   return (
-    <section className="py-24 bg-white ">
+    <section className="bg-white py-24">
       <div className="container">
         <div className="section-heading-container">
-          <div className="w-fit mx-auto">
+          <div className="mx-auto w-fit">
             <p className="badge">Boost your productivity</p>
           </div>
           <h2 className="section-title mt-5">
@@ -71,13 +74,13 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="mt-10 flex flex-col gap-6 items-center lg:flex-row lg:items-end lg:justify-center ">
+        <div className="mt-10 flex flex-col items-center gap-6 lg:flex-row lg:items-end lg:justify-center">
           {pricingTiers.map((tier) => (
             <div
               key={tier.title}
               className={clsx(
                 "card",
-                tier.inverse && "border-black bg-black text-white"
+                tier.inverse && "border-black bg-black text-white",
               )}
             >
               <div className="flex justify-between">
@@ -85,30 +88,41 @@ export default function Pricing() {
                   {tier.title}
                 </h3>
                 {tier.popular && (
-                  <p className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
-                    <span className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] text-transparent bg-clip-text font-medium">
+                  <p className="inline-flex rounded-xl border border-white/20 px-4 py-1.5 text-sm">
+                    <motion.span
+                      animate={{
+                        backgroundPositionX: "-100%",
+                      }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        ease: "linear",
+                        repeatType: "loop",
+                      }}
+                      className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] bg-clip-text font-medium text-transparent [background-size:200%]"
+                    >
                       Popular
-                    </span>
+                    </motion.span>
                   </p>
                 )}
               </div>
-              <div className="flex items-baseline gap-1 mt-[30px]">
-                <span className="text-4xl font-bold tracking-tighter leading-none">
+              <div className="mt-[30px] flex items-baseline gap-1">
+                <span className="text-4xl font-bold leading-none tracking-tighter">
                   ${tier.monthlyPrice}
                 </span>
-                <span className="tracking-tight text-[#6F6C90] ">/month</span>
+                <span className="tracking-tight text-[#6F6C90]">/month</span>
               </div>
               <button
                 className={clsx(
-                  "btn btn-primary w-full mt-[30px]",
-                  tier.inverse && "bg-white text-black"
+                  "btn btn-primary mt-[30px] w-full",
+                  tier.inverse && "bg-white text-black",
                 )}
               >
                 {tier.buttonText}
               </button>
-              <ul className="flex flex-col gap-5 mt-8">
+              <ul className="mt-8 flex flex-col gap-5">
                 {tier.features.map((feature, id) => (
-                  <li key={id} className="text-sm flex items-center gap-4">
+                  <li key={id} className="flex items-center gap-4 text-sm">
                     <CheckIcon className="h-6 w-6" />
                     <span>{feature}</span>
                   </li>
