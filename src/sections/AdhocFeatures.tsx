@@ -21,22 +21,22 @@ export default function KeyFeatures() {
         </div>
 
         <div className="flex justify-center gap-5 pt-14 ">
-          <div className="flex flex-col items-center justify-center py-10 px-20  text-center shadow-[0px_7px_14px_#EAEAEA] rounded-3xl  border  ">
+          <div className="flex flex-col items-center justify-center py-10 px-20   shadow-[0px_7px_14px_#EAEAEA] rounded-3xl  border border-[#1B1B1B/8]  ">
             <Image alt="cube-helix" src={cubeHelix} />
             <p className="text-2xl tracking-tight font-bold">
               Integration ecosystem
             </p>
-            <p className="">
+            <p className="text-center">
               Enhance your productivity by connecting with your favorite tools,
               keeping all your essentials in one place.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center py-10 px-20  text-center shadow-[0px_7px_24px_#EAEAEA] rounded-3xl border ">
+          <div className="flex flex-col items-center justify-center py-10 px-20  shadow-[0px_7px_24px_#EAEAEA] rounded-3xl border  border-[#1B1B1B/8] ">
             <Image alt="cube" src={cube} />
             <p className="text-2xl tracking-tight font-bold ">
               Goal setting and tracking
             </p>
-            <p>
+            <p className="text-center ">
               Define and track your goals, breaking down objectives into
               achievable tasks to keep your targets in sight.
             </p>

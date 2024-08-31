@@ -4,6 +4,7 @@ import Clients from "@/sections/Clients";
 import ProductInfo from "@/sections/ProductInfo";
 import AdhocFeatures from "@/sections/AdhocFeatures";
 import Pricing from "@/sections/Pricing";
+import Testimoials from "@/sections/Testimoials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductInfo />
       <AdhocFeatures />
       <Pricing />
+      <Testimoials />
     </div>
   );
 }

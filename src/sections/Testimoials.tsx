@@ -1,12 +1,15 @@
-import avatar1 from "@/assets/avatar-1.png";
-import avatar2 from "@/assets/avatar-2.png";
-import avatar3 from "@/assets/avatar-3.png";
-import avatar4 from "@/assets/avatar-4.png";
-import avatar5 from "@/assets/avatar-5.png";
-import avatar6 from "@/assets/avatar-6.png";
-import avatar7 from "@/assets/avatar-7.png";
-import avatar8 from "@/assets/avatar-8.png";
-import avatar9 from "@/assets/avatar-9.png";
+import Image from "next/image";
+import clsx from "clsx";
+
+import avatar1 from "@/public/avatar-1.png";
+import avatar2 from "@/public/avatar-2.png";
+import avatar3 from "@/public/avatar-3.png";
+import avatar4 from "@/public/avatar-4.png";
+import avatar5 from "@/public/avatar-5.png";
+import avatar6 from "@/public/avatar-6.png";
+import avatar7 from "@/public/avatar-7.png";
+import avatar8 from "@/public/avatar-8.png";
+import avatar9 from "@/public/avatar-9.png";
 
 const testimonials = [
   {
@@ -65,6 +68,65 @@ const testimonials = [
   },
 ];
 
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
+
+function TestimonialsColumn(props: {
+  className?: String;
+  testimonials: typeof testimonials;
+}) {
+  return (
+    <div
+      className={clsx(
+        props.className,
+        "flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]"
+      )}
+    >
+      {props.testimonials.map((testimonial) => (
+        <div key={testimonial.username} className="card">
+          <p>{testimonial.text}</p>
+          <div className="flex  mt-5 items-center gap-2">
+            <Image
+              src={testimonial.imageSrc}
+              alt={testimonial.name}
+              width={40}
+              height={40}
+              className="h-10 w-10"
+            />
+            <div>
+              <p className="font-medium tracking-tight">{testimonial.name}</p>
+              <p className="tracking-tight">{testimonial.username}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Testimoials() {
-  return <div>Testimoials</div>;
+  return (
+    <section className=" bg-white">
+      <div className="container">
+        <div className="section-heading-container ">
+          <div className="w-fit mx-auto">
+            <p className="badge">Testimonials</p>
+          </div>
+          <h2 className="section-title mt-5 ">What our users say</h2>
+        </div>
+        <div className="flex justify-center gap-6">
+          <TestimonialsColumn testimonials={firstColumn} />
+          <TestimonialsColumn
+            testimonials={secondColumn}
+            className="hidden md:flex "
+          />
+          <TestimonialsColumn
+            testimonials={thirdColumn}
+            className="hidden lg:flex"
+          />
+        </div>
+      </div>
+    </section>
+  );
 }

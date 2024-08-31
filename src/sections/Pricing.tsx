@@ -76,7 +76,7 @@ export default function Pricing() {
             <div
               key={tier.title}
               className={clsx(
-                "p-10 max-w-xs w-full rounded-3xl border  border-[#F1F1F1] shadow-[0px_7px_14px_#EAEAEA]",
+                "card",
                 tier.inverse && "border-black bg-black text-white"
               )}
             >
