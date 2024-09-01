@@ -1,4 +1,4 @@
-Live link ['page](https://app-landing-page-sass.vercel.app/)
+Live link [page](https://app-landing-page-sass.vercel.app/)
 
 ## Project details
 
