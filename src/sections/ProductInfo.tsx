@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -26,17 +25,17 @@ export default function ProductInfo() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] overflow-x-clip"
+      className="overflow-x-clip bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24"
     >
       <div className="container">
         <div className="section-heading-container">
-          <div className="w-fit mx-auto">
+          <div className="mx-auto w-fit">
             <p className="badge">Boost Your Productivity</p>
           </div>
-          <h2 className="section-title mt-5 ">
+          <h2 className="section-title mt-5">
             A more effective way to track progress
           </h2>
-          <p className="section-description mt-5 ">
+          <p className="section-description mt-5">
             Effortlessly turn your ideas into a fully functional, responsive,
             no-code SaaS website in just minutes with the set of free components
             for Framer.
@@ -50,7 +49,7 @@ export default function ProductInfo() {
             alt="pyramid-image"
             height={262}
             width={262}
-            className="hidden md:block absolute -right-36 -top-32"
+            className="absolute -right-36 -top-32 hidden md:block"
             style={{
               translateY,
             }}
@@ -60,7 +59,7 @@ export default function ProductInfo() {
             alt="tube-image"
             height={248}
             width={248}
-            className="hidden md:block absolute bottom-24 -left-32"
+            className="absolute -left-32 bottom-24 hidden md:block"
             style={{
               translateY,
             }}
@@ -68,57 +67,57 @@ export default function ProductInfo() {
         </div>
 
         <div className="mt-10">
-          <div className="max-w-[240px] md:max-w-[520px] md:grid md:grid-cols-2 md:gap-x-4 lg:max-w-none lg:flex lg:flex-row   mx-auto  flex flex-col ">
-            <div className="py-10 flex flex-col  gap-2  ">
+          <div className="mx-auto flex max-w-[240px] flex-col md:grid md:max-w-[520px] md:grid-cols-2 md:gap-x-4 lg:flex lg:max-w-none lg:flex-row">
+            <div className="flex flex-col gap-2 py-10">
               <Leaf />
-              <p className="tracking-tight font-bold text-lg ">
+              <p className="text-lg font-bold tracking-tight">
                 Integrating ecosystem
               </p>
-              <p className="tracking-tight ">
+              <p className="tracking-tight">
                 Track your progress and motivate your efforts everyday
               </p>
-              <button className="btn btn-text gap-1 ">
-                <span>Lear More</span>
+              <button className="btn btn-text gap-1">
+                <span>Lear more</span>
                 <ArrowRight className="h-5 w-5" />
               </button>
             </div>
 
-            <div className="py-10  flex flex-col  gap-2 ">
+            <div className="flex flex-col gap-2 py-10">
               <Goal />
-              <p className="tracking-tight font-bold text-lg ">
+              <p className="text-lg font-bold tracking-tight">
                 Goal setting and tracking
               </p>
-              <p className="tracking-tight ">
+              <p className="tracking-tight">
                 Set and track goals with manageable task breakdowns.
               </p>
               <button className="btn btn-text gap-1 pl-0">
-                <span>Lear More</span>
+                <span>Lear more</span>
                 <ArrowRight className="h-5 w-5" />
               </button>
             </div>
-            <div className="py-10  flex flex-col  gap-2 ">
+            <div className="flex flex-col gap-2 py-10">
               <Lock />
-              <p className="tracking-tight font-bold text-lg ">
+              <p className="text-lg font-bold tracking-tight">
                 Secure data encryption
               </p>
-              <p className="tracking-tight ">
+              <p className="tracking-tight">
                 Ensure your data’s safety with top-tier encryption.
               </p>
               <button className="btn btn-text gap-1 pl-0">
-                <span>Lear More</span>
+                <span>Lear more</span>
                 <ArrowRight className="h-5 w-5" />
               </button>
             </div>
-            <div className="py-10  flex flex-col  gap-2 ">
+            <div className="flex flex-col gap-2 py-10">
               <Bell />
-              <p className="tracking-tight font-bold text-lg ">
+              <p className="text-lg font-bold tracking-tight">
                 Customizable notifications
               </p>
-              <p className="tracking-tight   ">
+              <p className="tracking-tight">
                 Get alerts on tasks and deadlines that matter most.
               </p>
               <button className="btn btn-text gap-1 pl-0">
-                <span>Lear More</span>
+                <span>Lear more</span>
                 <ArrowRight className="h-5 w-5" />
               </button>
             </div>

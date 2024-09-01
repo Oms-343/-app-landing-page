@@ -1,5 +1,8 @@
+"use client";
+import React from "react";
 import Image from "next/image";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 import avatar1 from "@/public/avatar-1.png";
 import avatar2 from "@/public/avatar-2.png";
@@ -73,57 +76,74 @@ const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
 
 function TestimonialsColumn(props: {
-  className?: String;
+  className?: string;
   testimonials: typeof testimonials;
+  duration?: number;
 }) {
   return (
-    <div
-      className={clsx(
-        props.className,
-        "flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]"
-      )}
-    >
-      {props.testimonials.map((testimonial) => (
-        <div key={testimonial.username} className="card">
-          <p>{testimonial.text}</p>
-          <div className="flex  mt-5 items-center gap-2">
-            <Image
-              src={testimonial.imageSrc}
-              alt={testimonial.name}
-              width={40}
-              height={40}
-              className="h-10 w-10"
-            />
-            <div>
-              <p className="font-medium tracking-tight">{testimonial.name}</p>
-              <p className="tracking-tight">{testimonial.username}</p>
-            </div>
-          </div>
-        </div>
-      ))}
+    <div className={props.className}>
+      <motion.div
+        className="flex flex-col gap-6 pb-6"
+        animate={{
+          translateY: "-50%",
+        }}
+        transition={{
+          duration: props.duration || 10,
+          repeat: Infinity,
+          ease: "linear",
+          repeatType: "loop",
+        }}
+      >
+        {...new Array(2).fill(0).map((_, index) => (
+          <React.Fragment key={index}>
+            {props.testimonials.map((testimonial) => (
+              <div key={testimonial.username} className="card">
+                <p>{testimonial.text}</p>
+                <div className="mt-5 flex items-center gap-2">
+                  <Image
+                    src={testimonial.imageSrc}
+                    alt={testimonial.name}
+                    width={40}
+                    height={40}
+                    className="h-10 w-10"
+                  />
+                  <div>
+                    <p className="font-medium tracking-tight">
+                      {testimonial.name}
+                    </p>
+                    <p className="tracking-tight">{testimonial.username}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </React.Fragment>
+        ))}
+      </motion.div>
     </div>
   );
 }
 
 export default function Testimoials() {
   return (
-    <section className=" pt-12 pb-20 bg-white">
+    <section className="bg-white pb-20 pt-12">
       <div className="container">
-        <div className="section-heading-container ">
-          <div className="w-fit mx-auto">
+        <div className="section-heading-container">
+          <div className="mx-auto w-fit">
             <p className="badge">Testimonials</p>
           </div>
-          <h2 className="section-title mt-5 ">What our users say</h2>
+          <h2 className="section-title mt-5">What our users say</h2>
         </div>
-        <div className="flex justify-center gap-6">
-          <TestimonialsColumn testimonials={firstColumn} />
+        <div className="mt-10 flex max-h-[738px] justify-center gap-6 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
+          <TestimonialsColumn testimonials={firstColumn} duration={15} />
           <TestimonialsColumn
             testimonials={secondColumn}
-            className="hidden md:flex "
+            className="hidden md:block"
+            duration={19}
           />
           <TestimonialsColumn
             testimonials={thirdColumn}
-            className="hidden lg:flex"
+            className="hidden lg:block"
+            duration={17}
           />
         </div>
       </div>
