@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import clsx from "clsx";
 import { motion } from "framer-motion";
 
 import avatar1 from "@/public/avatar-1.png";

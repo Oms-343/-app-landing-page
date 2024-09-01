@@ -10,7 +10,7 @@ import Footer from "@/sections/Footer";
 
 export default function Home() {
   return (
-    <div className="">
+    <>
       <Header />
       <Hero />
       <Clients />
@@ -20,6 +20,6 @@ export default function Home() {
       <Testimoials />
       <CallToAction />
       <Footer />
-    </div>
+    </>
   );
 }

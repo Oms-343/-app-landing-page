@@ -3,7 +3,6 @@ import ArrowRight from "@/public/arrow-right.svg";
 import cogImage from "@/public/cog.png";
 import cylinderImage from "@/public/cylinder.png";
 import noodleImage from "@/public/noodle.png";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -19,34 +18,34 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip "
+      className="overflow-x-clip bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] pb-20 pt-8 md:pb-10 md:pt-5"
     >
       <div className="container">
-        <div className="md:flex items-center">
+        <div className="items-center md:flex">
           <div className="md:w-[478px]">
             <p className="badge">Version 2.0 is here</p>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter heading-background mt-6">
+            <h1 className="heading-background mt-6 text-5xl font-bold tracking-tighter md:text-7xl">
               Pathway to Productivity
             </h1>
-            <p className="text-xl text-[#010D3E] tracking-tight mt-6">
+            <p className="mt-6 text-xl tracking-tight text-[#010D3E]">
               Celebrate the joy of accomplishment with an app designed to track
               your progress, motivate your efforts, and celebrate your
               successes.
             </p>
-            <div className="flex  gap-4 items-center mt-[30px]">
+            <div className="mt-[30px] flex items-center gap-4">
               <button className="btn btn-primary">Get for free</button>
-              <button className="btn btn-text gap-1  ">
+              <button className="btn btn-text gap-1">
                 <span>Learn More </span>
                 <ArrowRight className="h-5 w-5" />
               </button>
             </div>
           </div>
 
-          <div className="mt-20 md:mt-0  md:h-[648px]  md:flex-1 relative">
+          <div className="relative mt-20 md:mt-0 md:h-[648px] md:flex-1">
             <motion.img
               src={cogImage.src}
               alt="cog-image"
-              className="md:absolute md:h-full   md:w-auto md:max-w-none md:-left-6 lg:left-0  "
+              className="md:absolute md:-left-6 md:h-full md:w-auto md:max-w-none lg:left-0"
               animate={{
                 translateY: [-30, 30],
               }}
@@ -62,7 +61,7 @@ export default function Hero() {
               alt="cylinder-image"
               width={220}
               height={220}
-              className="hidden md:block absolute -top-8 -left-32"
+              className="absolute -left-32 -top-8 hidden md:block"
               style={{
                 translateY: translateY,
               }}
@@ -72,7 +71,7 @@ export default function Hero() {
               alt="cylinder-image"
               width={220}
               height={220}
-              className="hidden lg:block absolute top-[524px] left-[448px] rotate-[30deg]  "
+              className="absolute left-[448px] top-[524px] hidden rotate-[30deg] lg:block"
               style={{
                 translateY: translateY,
                 rotate: 30,
