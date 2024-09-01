@@ -1,5 +1,7 @@
 Live link [page](https://app-landing-page-sass.vercel.app/)
 
+Figma [design](<https://www.figma.com/design/ozWFIlYe4dlDRoZr3sQy3z/SaaS-Website-UI-Kit-%E2%80%94-Framer-Website-Kit-(Community)?node-id=0-1&t=qt8OYV73v9P5ZSwJ-1>)
+
 ## Project details
 
 The following external libraries/packages are used in this project
