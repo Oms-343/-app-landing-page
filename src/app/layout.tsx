@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import clsx from 'clsx'
+import clsx from "clsx";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sass Website",
+  title: "Productivity",
   description: "Professional landing page for Sass applications",
 };
 
@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(dmSans.className, "antialiased bg-[#EAEEFE]")}>{children}</body>
+      <body className={clsx(dmSans.className, "bg-[#EAEEFE] antialiased")}>
+        {children}
+      </body>
     </html>
   );
 }
